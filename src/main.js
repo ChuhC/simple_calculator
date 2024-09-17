@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App'
-import './uni.promisify.adaptor'
 
 Vue.config.productionTip = false
 
@@ -10,3 +9,8 @@ const app = new Vue({
   ...App
 })
 app.$mount()
+
+// 添加以下全局配置
+Vue.prototype.$meta = {
+  showTabBar: () => false
+}
